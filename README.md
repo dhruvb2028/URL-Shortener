@@ -8,6 +8,7 @@ A simple URL shortener application built with Node.js, Express, and MongoDB.
 - Redirect short URLs to original destinations
 - MongoDB database for storing URL mappings
 - Clean and simple user interface
+- Deployed on Vercel
 
 ## Tech Stack
 
@@ -15,8 +16,11 @@ A simple URL shortener application built with Node.js, Express, and MongoDB.
 - **Database**: MongoDB (with Mongoose ODM)
 - **View Engine**: EJS
 - **URL Generation**: shortid
+- **Deployment**: Vercel
 
 ## Setup Instructions
+
+### Local Development
 
 1. **Clone the repository**
    ```bash
@@ -39,12 +43,32 @@ A simple URL shortener application built with Node.js, Express, and MongoDB.
 
 4. **Run the application**
    ```bash
-   node server.js
+   npm start
    ```
 
 5. **Access the application**
    
    Open your browser and navigate to `http://localhost:3000`
+
+### Deploy to Vercel
+
+1. **Install Vercel CLI** (optional)
+   ```bash
+   npm install -g vercel
+   ```
+
+2. **Deploy via Vercel Dashboard**
+   - Push your code to GitHub
+   - Go to [Vercel](https://vercel.com)
+   - Import your GitHub repository
+   - Add environment variables in Vercel project settings:
+     - `MONGODB_URI`: Your MongoDB connection string
+   - Deploy!
+
+3. **Deploy via CLI** (alternative)
+   ```bash
+   vercel
+   ```
 
 ## Usage
 
@@ -65,9 +89,17 @@ A simple URL shortener application built with Node.js, Express, and MongoDB.
 ├── .env                    # Environment variables (not tracked)
 ├── .env.example            # Example environment configuration
 ├── .gitignore              # Git ignore file
+├── vercel.json             # Vercel configuration
 ├── package.json            # Project dependencies
+├── README.md               # Project documentation
 └── server.js               # Main application file
 ```
+
+## Environment Variables
+
+Make sure to set these environment variables in Vercel:
+
+- `MONGODB_URI`: Your MongoDB Atlas connection string
 
 ## Security Note
 

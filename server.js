@@ -30,4 +30,7 @@ app.listen(port,()=>{
     console.log(`Server is listening on port ${port}`)
 })
 
+// Export the Express app for Vercel
+export default app;
+
  
