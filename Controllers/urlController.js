@@ -6,7 +6,8 @@ export const createShortUrl = async (req, res) => {
     const longUrl = req.body.longUrl;
     const shortCode = shortid.generate();
 
-    const shortUrl = `http://localhost:3000/${shortCode}`;
+    const shortUrl = `https://auroraai.online/${shortCode}`;
+    
 
     // Save to database
     const newUrlEntry = new urls({ shortCode, longUrl });
