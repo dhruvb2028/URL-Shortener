@@ -1,14 +1,17 @@
 import e from "express";
 import mongoose from "mongoose";
 import { createShortUrl, redirectToOriginalUrl } from "./Controllers/urlController.js";
+import dotenv from "dotenv";
+
+dotenv.config();
 
 const app = e();
 app.use(e.urlencoded({extended:true}))
 
-mongoose.connect("mongodb+srv://dhruvb2028:LvF2WGZW2JYNCITc@cluster0.6viw9wm.mongodb.net/").then(()=>
+mongoose.connect(process.env.MONGODB_URI).then(()=>
     console.log("MongoDB connected")).catch((e)=>{console.log(e)})
 
-const port = 3000
+const port = process.env.PORT || 3000
 
 // shortUrl must be null
 app.get("/", (req, res) => {
