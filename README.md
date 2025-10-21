@@ -2,13 +2,15 @@
 
 A simple URL shortener application built with Node.js, Express, and MongoDB.
 
+🌐 **Live Demo**: [https://auroraai.online/](https://auroraai.online/)
+
 ## Features
 
 - Shorten long URLs to compact, shareable links
 - Redirect short URLs to original destinations
 - MongoDB database for storing URL mappings
 - Clean and simple user interface
-- Deployed on Vercel
+- ✅ **Deployed on Vercel** with custom domain
 
 ## Tech Stack
 
@@ -16,9 +18,18 @@ A simple URL shortener application built with Node.js, Express, and MongoDB.
 - **Database**: MongoDB (with Mongoose ODM)
 - **View Engine**: EJS
 - **URL Generation**: shortid
-- **Deployment**: Vercel
+- **Deployment**: Vercel (https://auroraai.online/)
+- **Custom Domain**: Configured and active
+
+## Live Application
+
+🔗 **Visit the live application**: [https://auroraai.online/](https://auroraai.online/)
+
+The application is deployed on Vercel and accessible via a custom domain.
 
 ## Setup Instructions
+
+## Live Application
 
 ### Local Development
 
