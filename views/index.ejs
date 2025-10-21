@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>URL Shortener</title>
+</head>
+<body>
+    <div class="container">
+        <h1>URL Shortener</h1>
+
+        <form action="/shortenUrl" method="post">
+            <label for="longURL">Enter Long URL:</label> 
+            <input type="text" name="longUrl" id="longUrl" required>
+            <input type="submit" value="Shorten URL">
+        </form>
+
+        <% if(shortUrl) { %>
+            Your shortened URL is 
+            <a href="<%= shortUrl %>" target="_blank"> 
+                <%= shortUrl %> 
+            </a>  
+        <% } %>
+    </div>
+</body>
+</html>
